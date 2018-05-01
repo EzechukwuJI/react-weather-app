@@ -19,8 +19,11 @@ var Main = (props) => {
   return (
     <div>
       <Nav/>
-      <h1> Hello Main component </h1>
-      {props.children}
+      <div className="row">
+        <div className="columns medium-6 large-4 large-centered">
+          {props.children}
+        </div>
+      </div>
     </div>
   );
 }
