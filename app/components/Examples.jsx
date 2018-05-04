@@ -5,8 +5,8 @@ var {Link} = require('react-router');
 var Examples = React.createClass({
   render: function(){
     return (
-      <div className="text-center">
-        <p className="text-center">Here are a few example locations to try out </p>
+      <div>
+        <h1 className="text-center">Here are a few example locations to try out </h1>
         <ol>
           <li><Link to="/location=lagos">Lagos, Nigeria</Link></li>
           <li><Link to="/location=benin">Benin, Nigeria</Link></li>

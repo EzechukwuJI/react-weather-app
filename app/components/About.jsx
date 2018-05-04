@@ -11,7 +11,10 @@ var React = require('react');
 
 var About = (props) => {
   return (
-        <h4>Nested About component</h4>
+        <div className="text-center">
+          <h4 className="quote">About Page</h4>
+          <p className="text-primary">This is a weather application built from React. So far it's been a wonderful experience </p>
+        </div>
       );
 }
 
