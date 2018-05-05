@@ -15,15 +15,15 @@ module.exports = {
     return axios.get(requestUrl).then(
       function(res){
       // success case:  pass in code execution if request was successful
-      debugger;
       if(res.data.cod && res.data.message){
         throw new Error("this is the error we ");
       } else {
         return res.data.main.temp;
       }
-    }, function(res){
+    }, function(err){
       // error case: code for failed request, this could be for so many reasons.
-      throw new Error(res.data.message);
+      throw new Error(err.response.data.message);
+      // throw new Error("Could not fetch weather for that location");
       // alert(res.data);
 
     });
