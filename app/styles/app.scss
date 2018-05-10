@@ -1,0 +1,18 @@
+$space-large: 2.5rem;
+$title-color: #e8e8e8;
+
+
+.header {
+  background-color: #d453e9;
+}
+
+.bold-font {
+  font-size: 50px !important;
+  color: $title-color;
+  font-weight: bold;
+  margin-top: $space-large;
+}
+
+.new-nav-color {
+  background-color: #000000 !important;
+}

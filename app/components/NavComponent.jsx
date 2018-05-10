@@ -20,8 +20,8 @@ var NavComponent = React.createClass({
   },
   render: function() {
     return (
-      <div className='top-bar'>
-        <div className="top-bar-left">
+      <div className='top-bar new-nav-color'>
+        <div className="top-bar-left new-nav-color">
           <ul className="menu">
             <li className='menu-text'>
               React Weather App
