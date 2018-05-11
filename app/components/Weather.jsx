@@ -29,7 +29,9 @@ var Weather = React.createClass({
     }, function (e){
       that.setState({
         isLoading: false,
-        errorMessage: e.message
+        errorMessage: e.message,
+        location: undefined,
+        temp: undefined
       });
       alert(errorMessage);
     })
@@ -37,6 +39,24 @@ var Weather = React.createClass({
     //   location: location,
     //   temp: 23
     // });
+  },
+// Used to specify what happens once component is loaded
+  componentDidMount: function(){
+    var location = this.props.location.query.location;
+    if(location && location.length > 0){
+      this.handleSearch(location);
+      window.location.hash = "#/"; // re-routes url to home page or to any specific field
+    }
+  },
+
+// Used to make the component listen and respond
+// to changes in props
+  componentWillReceiveProps: function (newProps){
+    var location = newProps.location.query.location;
+    if(location && location.length > 0){
+      this.handleSearch(location);
+      window.location.hash = "#/"; // re-routes url to home page or to any specific field
+    }
   },
   render: function(){
     var {isLoading, temp, location, errorMessage} = this.state;
